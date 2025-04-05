@@ -7,6 +7,10 @@
         const [street, setStreet] = useState('');
         const [subject, setSubject] = useState('physical');
         const {tg} = useTelegram();
+
+        useEffect(() => {
+            TelegramWebApp.onEvent('mainButtonClicked', callback)
+        }, [])
     
         const onSendData = useCallback(() => {
             const data = {
