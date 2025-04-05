@@ -4,7 +4,7 @@ import { useTelegram } from './hooks/useTelegram';
 import Header from './components/Header/Header.jsx';
 import { Route, Routes } from 'react-router-dom';
 import ProductList from './components/ProductList/ProductList.jsx';
-import FormComponent from './components/Form/Form.jsx'; 
+import Form from './components/Form/Form.jsx'; 
 
 function App() {
   const { onToggleButton, tg } = useTelegram();
@@ -18,7 +18,7 @@ function App() {
       <Header />
       <Routes>
         <Route index element={<ProductList />} />
-        <Route path={'form'} element={<FormComponent />} /> 
+        <Route path={'form'} element={<Form />} /> 
       </Routes>
     </div>
   );
